@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <!--专家用户-->
+    <appender name="userInsertAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS,CTT} [%thread] %-5level [%logger{50}] %file:%line - %msg%n</pattern>
+        </encoder>
+        <file>${user.dir}/log/user/insert.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/log/user/insert-%i-%d{yyyy-MM-dd}-.log.gz</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <appender name="userQueryAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS,CTT} [%thread] %-5level [%logger{50}] %file:%line - %msg%n</pattern>
+        </encoder>
+        <file>${user.dir}/log/user/query.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/log/user/query-%i-%d{yyyy-MM-dd}-.log.gz</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <appender name="userUpdateAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS,CTT} [%thread] %-5level [%logger{50}] %file:%line - %msg%n</pattern>
+        </encoder>
+        <file>${user.dir}/log/user/update.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/log/user/update-%i-%d{yyyy-MM-dd}-.log.gz</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <logger name="userQuery" additivity="false" level="DEBUG">
+        <appender-ref ref="userQueryAppender"/>
+    </logger>
+    <logger name="userInsert" additivity="false" level="DEBUG">
+        <appender-ref ref="userInsertAppender"/>
+    </logger>
+    <logger name="userUpdate" additivity="false" level="DEBUG">
+        <appender-ref ref="userUpdateAppender"/>
+    </logger>
+
+    <!--管理员-->
+    <appender name="adminInsertAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS,CTT} [%thread] %-5level [%logger{50}] %file:%line - %msg%n</pattern>
+        </encoder>
+        <file>${user.dir}/log/admin/insert.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/log/admin/insert-%i-%d{yyyy-MM-dd}-.log.gz</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <appender name="adminQueryAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS,CTT} [%thread] %-5level [%logger{50}] %file:%line - %msg%n</pattern>
+        </encoder>
+        <file>${user.dir}/log/admin/query.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/log/admin/query-%i-%d{yyyy-MM-dd}-.log.gz</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <appender name="adminUpdateAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS,CTT} [%thread] %-5level [%logger{50}] %file:%line - %msg%n</pattern>
+        </encoder>
+        <file>${user.dir}/log/admin/update.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/log/admin/update-%i-%d{yyyy-MM-dd}-.log.gz</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <logger name="adminQuery" additivity="false" level="DEBUG">
+        <appender-ref ref="adminQueryAppender"/>
+    </logger>
+    <logger name="adminInsert" additivity="false" level="DEBUG">
+        <appender-ref ref="adminInsertAppender"/>
+    </logger>
+    <logger name="adminUpdate" additivity="false" level="DEBUG">
+        <appender-ref ref="adminUpdateAppender"/>
+    </logger>
+</configuration>

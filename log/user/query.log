@@ -1,0 +1,14 @@
+2024-04-07 17:24:58.173 [http-nio-8836-exec-5] INFO  [userQuery] QueryAop.java:105 - 用户:3 使用了方法:queryAhpFirstSuperficialData 请求路径是:http://localhost:8836/ahpFirstData/searchAll-pagination-user 请求的参数是:{Parameter:0,Name:params,Type:java.util.Map,Value:{"pageNum":1,"pageSize":1};Parameter:1,Name:uid,Type:long,Value:3;}
+
+
+2024-04-07 17:24:58.279 [http-nio-8836-exec-5] INFO  [userQuery] QueryAop.java:126 - 用户:3 使用了方法:queryAhpFirstSuperficialData 请求路径是:http://localhost:8836/ahpFirstData/searchAll-pagination-user 请求的参数是:{Parameter:0,Name:params,Type:java.util.Map,Value:{"pageNum":1,"pageSize":1};Parameter:1,Name:uid,Type:long,Value:3;}
+获得的返回值是:{"code":200,"msg":"操作成功","total":4,"data":[{"created_time":"2024-01-24 21:24:58","submit":1,"afd_id":1,"alias":"专家1第一次评测"}]}
+
+
+2024-04-07 17:25:02.760 [http-nio-8836-exec-3] INFO  [userQuery] QueryAop.java:105 - 用户:3 使用了方法:queryAhpFirstSuperficialData 请求路径是:http://localhost:8836/ahpFirstData/searchAll-pagination-user 请求的参数是:{Parameter:0,Name:params,Type:java.util.Map,Value:{"pageNum":1,"pageSize":1};Parameter:1,Name:uid,Type:long,Value:3;}
+
+
+2024-04-07 17:25:02.775 [http-nio-8836-exec-3] INFO  [userQuery] QueryAop.java:126 - 用户:3 使用了方法:queryAhpFirstSuperficialData 请求路径是:http://localhost:8836/ahpFirstData/searchAll-pagination-user 请求的参数是:{Parameter:0,Name:params,Type:java.util.Map,Value:{"pageNum":1,"pageSize":1};Parameter:1,Name:uid,Type:long,Value:3;}
+获得的返回值是:{"code":200,"msg":"操作成功","total":4,"data":[{"created_time":"2024-01-24 21:24:58","submit":1,"afd_id":1,"alias":"专家1第一次评测"}]}
+
+

@@ -1,0 +1,7 @@
+2024-04-10 21:07:27.739 [http-nio-8836-exec-1] INFO  [userInsert] InsertAop.java:105 - 用户:3 使用了方法:insertAhpFirstAnalyseData 请求路径是:http://localhost:8836/ahpFirstData/analyse 请求的参数是:{Parameter:0,Name:dto,Type:com.example.ahp.entity.dtos.AhpFirstDataDto,Value:{"afdId":0,"uid":3,"submit":0,"scale":3,"alias":"专家3test2","names":["组织架构","决策机制","执行机制"],"originalData":[[1.0,1.0,1.0],[1.0,1.0,1.0],[1.0,1.0,1.0]],"ri":0.0,"result":false};}
+
+
+2024-04-10 21:07:27.763 [http-nio-8836-exec-1] INFO  [userInsert] InsertAop.java:126 - 用户:3 使用了方法:insertAhpFirstAnalyseData 请求路径是:http://localhost:8836/ahpFirstData/analyse 请求的参数是:{Parameter:0,Name:dto,Type:com.example.ahp.entity.dtos.AhpFirstDataDto,Value:{"afdId":0,"uid":3,"submit":0,"scale":3,"alias":"专家3test2","names":["组织架构","决策机制","执行机制"],"originalData":[[1.0,1.0,1.0],[1.0,1.0,1.0],[1.0,1.0,1.0]],"ri":0.0,"result":false};}
+获得的返回值是:{"code":400,"msg":"一致性不通过!","data":{"afdId":0,"uid":3,"submit":-1,"scale":3,"alias":"专家3test2","names":["组织架构","决策机制","执行机制"],"originalData":[[1.0,1.0,1.0],[1.0,1.0,1.0],[1.0,1.0,1.0]],"eigenvectors":["1.000","1.000","1.000"],"proportion":["33.333%","33.333%","33.333%"],"maxEigenvalue":"3.000","ci":"0.000","ri":0.52,"cr":"0.000","result":false}}
+
+
