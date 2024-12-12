@@ -12,24 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Zhangkunji
- * @date 2024/11/27
+ * @date 2024/12/12
  * @Description
  */
 
 @RestController
-@RequestMapping("/ai")
-public class AlibabaAIServiceController {
+@RequestMapping("/aiService")
+public class AlibabaAIController {
+
+    private final AlibabaAIService aiService;
+
     @Autowired
-    AlibabaAIService alibabaAIService;
-
-    @PostMapping
-    public Result aiReply(@RequestBody String question) throws NoApiKeyException, InputRequiredException {
-        return alibabaAIService.call(question);
+    public AlibabaAIController(AlibabaAIService aiService) {
+        this.aiService = aiService;
     }
 
-    @PostMapping("/new_dialogue")
-    public Result startNewDialogue() {
-        return alibabaAIService.startNewDialogue();
+    @PostMapping("/ask")
+    public Result askAQuestion(@RequestBody String question) throws NoApiKeyException, InputRequiredException {
+        return aiService.call(question);
     }
-
 }

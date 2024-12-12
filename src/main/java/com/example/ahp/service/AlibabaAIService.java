@@ -12,7 +12,7 @@ import com.example.ahp.entity.pojos.Question;
  * @Description
  */
 public interface AlibabaAIService extends IService<Question> {
-    Result call(String question, String DBId) throws NoApiKeyException, InputRequiredException;
+    Result call(String question) throws NoApiKeyException, InputRequiredException;
 
     Result startNewDialogue();
 
